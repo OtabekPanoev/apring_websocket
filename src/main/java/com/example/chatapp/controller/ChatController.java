@@ -1,5 +1,8 @@
-package com.alibou.websocket.chat;
+package com.example.chatapp.controller;
 
+import com.example.chatapp.model.ChatMessage;
+import com.example.chatapp.payload.ChatNotification;
+import com.example.chatapp.service.ChatMessageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;

@@ -1,9 +1,10 @@
-package com.alibou.websocket.chat;
+package com.example.chatapp.repository;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+import com.example.chatapp.model.ChatMessage;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface ChatMessageRepository extends MongoRepository<ChatMessage, String> {
+public interface ChatMessageRepository extends JpaRepository<ChatMessage, String> {
     List<ChatMessage> findByChatId(String chatId);
 }

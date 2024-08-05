@@ -1,5 +1,7 @@
-package com.alibou.websocket.chatroom;
+package com.example.chatapp.service;
 
+import com.example.chatapp.model.ChatRoom;
+import com.example.chatapp.repository.ChatRoomRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

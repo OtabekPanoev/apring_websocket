@@ -1,4 +1,4 @@
-package com.alibou.websocket.chat;
+package com.example.chatapp.payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class ChatNotification {
-    private String id;
+    private Integer id;
     private String senderId;
     private String recipientId;
     private String content;

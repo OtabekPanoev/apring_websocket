@@ -1,6 +1,9 @@
-package com.alibou.websocket.user;
+package com.example.chatapp.controller;
 
+import com.example.chatapp.model.User;
+import com.example.chatapp.service.UserService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -12,6 +15,7 @@ import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
+@Log4j2
 public class UserController {
 
     private final UserService userService;
@@ -21,6 +25,7 @@ public class UserController {
     public User addUser(
             @Payload User user
     ) {
+        log.info("Adding user: {}", user);
         userService.saveUser(user);
         return user;
     }
@@ -30,6 +35,7 @@ public class UserController {
     public User disconnectUser(
             @Payload User user
     ) {
+        log.info("Disconnecting user: {}", user);
         userService.disconnect(user);
         return user;
     }
